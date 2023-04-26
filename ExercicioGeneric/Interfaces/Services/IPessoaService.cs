@@ -1,0 +1,14 @@
+﻿using ExercicioGeneric.Domain.Entidade;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExercicioGeneric.Interface.Servico
+{
+    internal interface IPessoaService : IBaseService<Pessoa>
+    {
+        
+    }
+}

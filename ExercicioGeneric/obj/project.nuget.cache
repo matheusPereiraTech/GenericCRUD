@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "wcv6VhcZEV5JOp3AH/R5b6eL+uOHlcXcJ1h3AbPflMx3Tw5fFCHeTP/lTqVCKN1JBrnSbMFuswaIAbb1RoT/uw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\matheus.p\\source\\repos\\ExercicioGeneric\\ExercicioGeneric\\ExercicioGeneric.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\matheus.p\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\matheus.p\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\matheus.p\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
