@@ -65,8 +65,9 @@ namespace ExercicioGeneric.View
             Console.WriteLine("Finalizar Programa - 5");
             Console.WriteLine("------------------------------------");
 
+            int.TryParse(Console.ReadLine(), out int opcao);
 
-            return int.Parse(Console.ReadLine());
+            return opcao;
         }
 
         private static void AdicionarPessoa(IPessoaService pessoaService)
