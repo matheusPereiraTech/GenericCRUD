@@ -57,7 +57,7 @@ namespace ExercicioGeneric.View
 
         private static int Menu()
         {
-            Console.WriteLine("---------------MENU-------------------");
+            Console.WriteLine("---------------MENU-----------------");
             Console.WriteLine("Cadastrar Pessoa - 1");
             Console.WriteLine("Mostra Todas as  Pessoas - 2");
             Console.WriteLine("Remover Pessoa - 3");
@@ -66,6 +66,8 @@ namespace ExercicioGeneric.View
             Console.WriteLine("------------------------------------");
 
             int.TryParse(Console.ReadLine(), out int opcao);
+
+            Console.WriteLine("\n");
 
             return opcao;
         }
@@ -87,28 +89,44 @@ namespace ExercicioGeneric.View
         private static void RemoverPessoa(IPessoaService pessoaService)
         {
             Console.WriteLine("Informe a pessoa para remover:");
-            int id = int.Parse(Console.ReadLine());
+            int.TryParse(Console.ReadLine(), out int id);
+
+            var pessoaBuscada = pessoaService.Buscar(id);
+
+            if (pessoaService.ValidarPessoaEncontrada(pessoaBuscada))
+            {
+                return;
+            }
+
+            Console.WriteLine("\n");
 
             pessoaService.Remover(id);
         }
 
         private static void MostrarPessoas(IPessoaService pessoaService)
         {
-            Console.WriteLine("\n");
-
             List<Pessoa> listaPessoas = pessoaService.mostrarTodos();
+
+            pessoaService.ValidarListaVazia(listaPessoas);
 
             foreach (var item in listaPessoas)
             {
                 Console.WriteLine(item);
-                Console.WriteLine("\n");
+
             }
         }
 
         private static void AtualizarPessoa(IPessoaService pessoaService)
         {
             Console.WriteLine("Informe a pessoa para atualizar:");
-            int id = int.Parse(Console.ReadLine());
+            int.TryParse(Console.ReadLine(), out int id);
+
+            var pessoaBuscada = pessoaService.Buscar(id);
+
+            if (pessoaService.ValidarPessoaEncontrada(pessoaBuscada))
+            {
+                return;
+            }
 
             Console.WriteLine("\n");
             Console.WriteLine("Informe o nome da pessoa:");
@@ -117,7 +135,7 @@ namespace ExercicioGeneric.View
             Console.WriteLine("Informe a idade da pessoa:");
             string idadePessoaAtualizada = Console.ReadLine();
 
-            var pessoaBuscada = pessoaService.Buscar(id);
+            Console.WriteLine("\n");
 
             pessoaBuscada.Nome = nomePessoaAtualizada;
 

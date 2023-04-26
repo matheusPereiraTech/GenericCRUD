@@ -9,6 +9,9 @@ namespace ExercicioGeneric.Interface.Servico
 {
     internal interface IPessoaService : IBaseService<Pessoa>
     {
+        public bool ValidarPessoaEncontrada(Pessoa pessoa);
+
+        public void ValidarListaVazia(List<Pessoa> pessoas);
         
     }
 }
