@@ -6,7 +6,7 @@ using ExercicioGeneric.Services;
 using ExercicioGeneric.Servico;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ExercicioGeneric
+namespace ExercicioGeneric.View
 {
     internal class Programa
     {
@@ -37,7 +37,7 @@ namespace ExercicioGeneric
                         AtualizarPessoa(pessoaService);
                         break;
 
-                        case 5:
+                    case 5:
                         Console.WriteLine("Programa Finalizado!!!");
                         return;
                     default:
